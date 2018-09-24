@@ -1,0 +1,16 @@
+<div class='header'>
+    <div class='header_main'>
+      <a href="/">главная</a>
+      <a href="{% url 'home:index_about' %}">О НАС</a>
+    </div>
+    <div class='header_search'>
+      <form>
+        <input class='header_search_form' type='text' placeholder="Что ищем? ..." />
+        <input class='header_search_where' type='text' placeholder="Где ищем? ..." />
+        <button> искать </button>
+      </form>
+    </div>
+    <div class='header_login'>
+      <a href="{% url 'products:products_index' %}"> ПОДАТЬ ОБЪЯВЛЕНИЕ </a>
+    </div>
+</div>

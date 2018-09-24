@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} ПОДАТЬ ОБЪЯВЛЕНИЕ {% endblock %}
+
+{% block content %}
+<div class='product_form'>
+  <form  action="" method="POST" enctype="multipart/form-data" >{% csrf_token %}
+    {{form.as_p}}
+    <label class='label_file'>
+      основное фото
+      <input type='file' name='photo' class='input_file' />
+    </label><br/>
+    {# {{formset.as_p}} #}
+    <input class="product_btn" type='submit' value='ОТПРАВИТЬ' />
+  </form>
+</div>
+{% endblock content %}

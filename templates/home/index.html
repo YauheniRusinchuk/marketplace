@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} ГЛАВНАЯ  {% endblock title %}
+
+{% block content %}
+<div class='home_products_all'>
+
+      {% for product in products %}
+        <div class='container'>
+          <div class='info'>
+            <a href="{% url 'home:index_detail' pk=product.pk %}"> {{product.title}} </a>
+            <p class='info_city'> Город : {{product.city}} </p>
+            <span> {{product.price}} </span>
+          </div>
+          <div class='item_img'>
+            {% if product.photo %}
+              <img src="{{product.photo.url}}" />
+            {% else %}
+              <img src="https://ters5.com/wp-content/themes/diver/images/noimage.gif" />
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+
+</div>
+{% endblock content %}
